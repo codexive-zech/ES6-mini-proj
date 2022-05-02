@@ -84,3 +84,10 @@ Navbar
 .post-info span {
   margin-right: 0.5rem;
 }
+
+.dark-theme {
+  --clr-bcg: #282c35;
+  --clr-font: #fff;
+  --clr-primary: #ffa7c4;
+  --clr-grey: #cbd5e1;
+}
