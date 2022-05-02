@@ -24,5 +24,20 @@ const displayProduct = filteredProduct
   })
   .join('');
 
-// merging the articleData function expression into the article container section in the HTML
+// merging the display Product function expression into the product container section in the HTML
 productContainer.innerHTML = displayProduct;
+
+// Selecting the HTML class that will take in action and effect
+const companies = document.querySelector('.companies');
+// created a function expression so that the converted object can be iterated using the array method
+const displayCompany = filteredProduct
+  .map((companyName) => {
+    // using Destructuring to select only the company property from the converted products array
+    const { company } = companyName;
+    // dynamically displaying the Companies in the HTML and adding the Destructure property in the Object array of the product to the HTML
+    return `<button class="company-btn">${company}</button>`;
+  })
+  .join('');
+
+// merging the display company function expression into the companies section in the HTML
+companies.innerHTML = displayCompany;
